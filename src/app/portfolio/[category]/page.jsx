@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
+
+import styles from "./page.module.css";
 
 const Category = () => {
-  return (
-    <div>Category</div>
-  )
-}
+  return <div className={styles.container}>Category</div>;
+};
 
-export default Category
+export default Category;

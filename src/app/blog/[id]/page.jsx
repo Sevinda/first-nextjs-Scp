@@ -16,9 +16,16 @@ async function getData(id) {
   return res.json();
 }
 
+export async function generateMetadata({params}) {
+  const post = await getData(params.id)
+  return {
+    title: "Scp | " + post.title,
+    description: post.desc,
+  }
+}
+
 const BlogPost = async ({ params }) => {
   const data = await getData(params.id);
-  console.log(data);
 
   return (
     <div className={styles.container}>
